@@ -35,7 +35,7 @@ const Movies = () => {
   useEffect(() => {
 
     const fetchMovies  = async()=>{
-      const {data : {results}} = await axios.get(`${url}discover/movie?include_adult=true&include_video=false&api_key=${apiKey}&page=${i}`);
+      const {data : {results}} = await axios.get(`${url}discover/movie?include_adult=false&include_video=false&api_key=${apiKey}&page=${i}`);
       setMovies (results);
     };
 

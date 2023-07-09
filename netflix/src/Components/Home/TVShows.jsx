@@ -38,7 +38,7 @@ const TVShows = () => {
 
         const fetchTVshows  = async()=>{
             
-          const {data : {results}} = await axios.get(`${url}discover/tv?include_adult=true&include_null_first_air_dates=false&api_key=${apiKey}&page=${i}`);
+          const {data : {results}} = await axios.get(`${url}discover/tv?include_adult=false&include_null_first_air_dates=false&api_key=${apiKey}&page=${i}`);
           setTVshow(results);
         };
 

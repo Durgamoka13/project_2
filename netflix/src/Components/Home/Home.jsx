@@ -9,7 +9,7 @@ import TVShows from './TVShows'
 import Recentm from './Recentm'
 
 let i = Math.floor(Math.random() * 10);
-if(i==0)
+if(i===0)
     i=1;
 
 const apiKey="6f53ad5a8631409c692450f46ff6e804"
@@ -20,7 +20,7 @@ const nowPlaying = "now_playing"
 const popular = "popular"
 const topRated = "top_rated"
 const disc = "discover"
-const recentlyAdded = "recently"
+
 
 
 
@@ -89,7 +89,7 @@ const Home = () => {
             
          };
          const fetchDisc = async()=>{
-            const {data:{results}}= await axios.get(`${url}/${disc}/tv?include_adult=true&include_null_first_air_dates=false&api_key=${apiKey}&page=${i}`);
+            const {data:{results}}= await axios.get(`${url}/${disc}/tv?include_adult=false&include_null_first_air_dates=false&api_key=${apiKey}&page=${i}`);
             
             setDis(results);
            
